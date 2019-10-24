@@ -1,29 +1,23 @@
 
-%%C骴igo implementado en Matlab 
-%%C骴igo de Pico y Placa
+%%C贸digo implementado en Matlab 
+%%C贸digo de Pico y Placa
 %%Realizado por: Valeria Nathalie Moreno Hermosa
 
 clc
 clear all;
 close all;
 
-%Variables
-% p=0; %Numero de Placa
-% f=0; %Fecha de circulaci髇
-% h=0; %Horario de circulaci髇
-% a=0; %趌timo d韌ito de p
+p = input('Por favor ingrese el n煤mero de Placa \nEj ABC0000: ','s');
+f = input('Por favor ingrese la fecha de circulaci贸n \nEj 01/01/2000: ','s');
+h = input('Por favor ingrese el horario de circulaci贸n \nEj 20:00: ','s');
 
-p = input('Por favor ingrese el n鷐ero de Placa \nEj ABC0000: ','s');
-f = input('Por favor ingrese la fecha de circulaci髇 \nEj 01/01/2000: ','s');
-h = input('Por favor ingrese el horario de circulaci髇 \nEj 20:00: ','s');
-
-%趌timo d韌ito del n鷐ero de Placa
+%脷ltimo d铆gito del n煤mero de Placa
 dp=str2double(p(length(p)));
 
-%D韆 exacto de la semana
-dd=str2double([f(1),f(2)]); %D韆
+%D铆a exacto de la semana
+dd=str2double([f(1),f(2)]); %D铆a
 mm=str2double([f(4),f(5)]); %Mes
-yy=str2double([f(7),f(8),f(9),f(10)]); %A駉
+yy=str2double([f(7),f(8),f(9),f(10)]); %A帽o
 
 cal=calendar(yy,mm);
 [aux,d]=find(cal==dd);
